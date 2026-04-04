@@ -1,6 +1,6 @@
 // app/_components/DotCursor.tsx
 "use client"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { frame, useSpring } from "motion/react"
 import { MotionDiv, MotionSpan } from "../utils/lazy-ui"
 
@@ -12,6 +12,7 @@ const MAX_W = 260 // hard cap so long labels don't get silly-wide
 const spring = { stiffness: 400, damping: 50, restDelta: 0.001 }
 
 export function DotCursor() {
+  const [enabled, setEnabled] = useState(false)
   const labelRef = useRef<HTMLSpanElement>(null)
   const lastTargetRef = useRef<HTMLElement | null>(null)
 
@@ -23,6 +24,11 @@ export function DotCursor() {
   const labelOpacity = useSpring(0, { stiffness: 300, damping: 40 })
 
   useEffect(() => {
+    const isFinePointer = typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches
+    const reduceMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (!isFinePointer || reduceMotion) return
+    setEnabled(true)
+
     const onMove = (ev: PointerEvent) => {
       const { clientX, clientY } = ev
       frame.read(() => {
@@ -80,7 +86,9 @@ export function DotCursor() {
       window.removeEventListener("pointermove", onMove)
       window.removeEventListener("pointerleave", onLeaveWindow)
     }
-  }, [x, y, w, h, labelOpacity])
+  }, [enabled, x, y, w, h, labelOpacity])
+
+  if (!enabled) return null
 
   return (
     <MotionDiv

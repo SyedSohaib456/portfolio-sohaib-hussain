@@ -118,8 +118,8 @@ export const ProjectsStatic: React.FC = () => {
       <div className="inside-container-small">
         <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
           {STATIC_PROJECTS.map((project) => {
-            const ProjectWrapper = project.isExternal ? "a" : Link
-            const wrapperProps = project.isExternal
+            const Tag = project.isExternal ? "a" : Link
+            const tagProps = project.isExternal
               ? {
                   href: project.href,
                   target: "_blank",
@@ -135,9 +135,9 @@ export const ProjectsStatic: React.FC = () => {
                 }
 
             return (
-              <ProjectWrapper key={project.id} {...wrapperProps}>
+              <Tag key={project.id} {...tagProps}>
                 <Card src={project.src} alt={project.alt} color={project.color} type={project.type} reveal={false} text={project.text} />
-              </ProjectWrapper>
+              </Tag>
             )
           })}
         </div>

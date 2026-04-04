@@ -6,26 +6,11 @@ import { RecruiterContact } from "../components/RecruiterContact"
 import { Metadata } from "next"
 import { SITE_CONFIG, SITE_SLUGS } from "@/config/siteConfig"
 import { homeGraph } from "@/config/schemas"
-import Script from "next/script"
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
   description:
-    "Explore the web developer portfolio of Austin Serb, a full-stack engineer building fast, modern web applications. See what a professional coding portfolio looks like, featuring projects in React, Next.js, and the custom-built React-Zero-UI library.",
-
-  keywords: [
-    "Austin Serb",
-    "Web Developer Portfolio",
-    "Serbyte",
-    "React Zero-UI",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Full-Stack Engineer",
-    "Seattle",
-
-    "React Developer Portfolio",
-  ],
+    "Explore the web developer portfolio of Austin Serb, a full-stack engineer building fast, modern web applications. See what a professional coding portfolio looks like, featuring projects in React, Next.js, and a custom-built React-Zero-UI library.",
   authors: [{ name: "Austin Serb" }],
   creator: "Austin Serb",
   alternates: {
@@ -36,7 +21,7 @@ export const metadata: Metadata = {
 const PortfolioPage: React.FC = () => {
   return (
     <main className="overflow-hidden">
-      <Script
+      <script
         id="id-site-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{

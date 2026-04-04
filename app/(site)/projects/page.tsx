@@ -1,4 +1,3 @@
-import React from "react"
 import { WorkHero } from "./WorkHero"
 import { ProjectsStatic } from "./ProjectsStatic"
 import { RecruiterContact } from "@/app/components/RecruiterContact"
@@ -18,6 +17,7 @@ const page = () => {
   return (
     <main className="relative z-1">
       <script
+        id="id-projects-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(projectsGraph),
