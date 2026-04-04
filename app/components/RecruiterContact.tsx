@@ -25,7 +25,7 @@ export const RecruiterContact: React.FC = () => {
             </div>
             <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-700">
               <h2 className="font-medium text-slate-900">Austin Serb</h2>
-              <p className="text-slate-500">Full-Stack - Frontend Focused</p>
+              <p className="text-slate-500">Full-Stack Engineer</p>
             </div>
           </div>
 

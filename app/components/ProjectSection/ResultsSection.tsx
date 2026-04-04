@@ -9,7 +9,7 @@ export interface AnalyticCardProps {
   dataSource: string
 }
 
-export interface ResultsSectionProps {
+interface ResultsSectionProps {
   analyticCards: AnalyticCardProps[]
 }
 

@@ -309,15 +309,6 @@ html {
     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
   }
 
-  .list {
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 40px;
-    min-width: calc(var(--width) * var(--quantity));
-  }
-
   .item {
     width: var(--width, 100%);
     height: var(--height);

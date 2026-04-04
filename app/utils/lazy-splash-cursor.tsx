@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { TiltedWrapperProps } from "../ui/TiltedWrapper"
 
 // hoist this to module scope (not inside the component)
-export const SplashCursor = /*#__PURE__*/ dynamic(() => import("../components/SplashCursor").then((m) => m.default), {
+const SplashCursor = /*#__PURE__*/ dynamic(() => import("../components/SplashCursor").then((m) => m.default), {
   ssr: false,
   loading: () => null,
 })
@@ -26,7 +26,7 @@ export function LazySplashCursor() {
   return cursorMoved ? <SplashCursor /> : null
 }
 
-export const TiltedWrapper = /*#__PURE__*/ dynamic(() => import("../ui/TiltedWrapper").then((m) => m.TiltedWrapper), {
+const TiltedWrapper = /*#__PURE__*/ dynamic(() => import("../ui/TiltedWrapper").then((m) => m.TiltedWrapper), {
   ssr: false,
   loading: () => null,
 })

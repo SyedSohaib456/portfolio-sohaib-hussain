@@ -17,7 +17,7 @@ export type HeroOffset = {
   dy?: number // fine-tune Y
 }
 
-export interface AnimatedCardProps {
+interface AnimatedCardProps {
   src: StaticImageData
   alt: string
   offset: HeroOffset

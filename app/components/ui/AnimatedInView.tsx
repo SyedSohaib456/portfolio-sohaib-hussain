@@ -2,7 +2,7 @@ import { MotionH1, MotionH2, MotionP, MotionDiv, MotionSpan, MotionArticle } fro
 import { MotionProps } from "motion/react"
 import { ElementType, ReactNode } from "react"
 
-export interface AnimatedInViewProps<T extends ElementType> extends MotionProps {
+interface AnimatedInViewProps<T extends ElementType> extends MotionProps {
   element: T
   delay?: number
   duration?: number
