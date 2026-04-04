@@ -36,6 +36,7 @@ export const ProjectHero: React.FC<ProjectHeroProps> = ({ title, client, year, d
         href={link}
         title={`View ${client} live site`}
         target="_blank"
+        rel="nofollow noopener"
         className="underline-hover flex w-fit items-center gap-1 text-lg text-nowrap text-black"
       >
         View Live Site

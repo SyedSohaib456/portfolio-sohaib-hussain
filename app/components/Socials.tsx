@@ -51,7 +51,7 @@ export const Socials: React.FC<{
       {socialLinks.map((link) => (
         <MotionDiv variants={linkLogo} key={link.href}>
           <Link
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             target="_blank"
             className={clsx("footer-link", iconClassName)}
             href={link.href}

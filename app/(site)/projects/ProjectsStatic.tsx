@@ -123,7 +123,7 @@ export const ProjectsStatic: React.FC = () => {
               ? {
                   href: project.href,
                   target: "_blank",
-                  rel: "noopener",
+                  rel: "nofollow noopener",
                   "data-text": project.dataText,
                   "aria-label": project.ariaLabel,
                 }
