@@ -8,7 +8,7 @@ import { MotionWrapper } from "./utils/lazy-ui"
 import { Analytics } from "@vercel/analytics/next"
 import { bodyAttributes } from "@zero-ui/attributes"
 import { ViewTransitions } from "./utils/ViewTransition"
-// import { BottomBlurOverlay } from "./ui/BlurBottomOverlay"
+import { BottomBlurOverlay } from "./ui/BlurBottomOverlay"
 // import { LazySplashCursor } from "./utils/lazy-splash-cursor"
 // import { DesktopCursor } from "./utils/lazy-dot-cursor"
 import { siteGraph } from "@/config/schemas"
@@ -40,7 +40,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="custom:mx-auto xxs:mx-3.5 pointer-events-none absolute inset-0 z-1 max-w-6xl [background-image:url('/assets/framer-noise.png')] bg-size-[128px] bg-repeat opacity-6 md:mx-5 lg:mx-8" />
           <div className={`${switzer.variable} font-switzer subpixel-antialiased`}>
             <div className="custom:mx-auto xxs:border-x pointer-events-none absolute inset-0 z-0 mx-3.5 max-w-6xl border-gray-200 md:mx-5 lg:mx-8" />
-            {/* <BottomBlurOverlay /> */}
+            <BottomBlurOverlay />
             <TopBarV2 />
             {children}
 
