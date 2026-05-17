@@ -2,7 +2,7 @@ import Image from "next/image"
 import { H3, Text } from "@/app/ui/Elements"
 import { MotionDiv } from "@/app/utils/lazy-ui"
 import { Icon } from "./Icon"
-import profilePhoto from "@/app/images/profile.webp"
+import profilePhoto from "@/public/assets/profile.webp"
 import { SITE_NAP } from "@/config/siteConfig"
 import { Mail } from "@react-zero-ui/icon-sprite"
 import { BlackButtonLink } from "./ui/BlackButtonLink"
@@ -24,8 +24,8 @@ export const RecruiterContact: React.FC = () => {
               <Image src={profilePhoto} alt="Austin Serb" fill sizes="80px" className="object-cover" />
             </div>
             <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-700">
-              <h2 className="font-medium text-slate-900">Austin Serb</h2>
-              <p className="text-slate-500">Full-Stack Engineer</p>
+              <h2 className="font-medium text-slate-900">Sohaib Hussain Shah</h2>
+              <p className="text-slate-500">React Native & Front-End Engineer</p>
             </div>
           </div>
 
@@ -37,8 +37,7 @@ export const RecruiterContact: React.FC = () => {
               <span className="text-slate-500">Let&apos;s chat.</span>
             </H3>
             <Text className="max-w-2xl text-center text-balance">
-              I build fast, accessible web apps with React, Next.js, and TypeScript. I&apos;m looking for teams that value product quality, performance, and
-              thoughtful UX.
+              I build production-grade mobile and web apps with React Native, React, and TypeScript. I&apos;m looking for remote roles with high-growth tech companies that value quality and scale.
             </Text>
           </div>
 

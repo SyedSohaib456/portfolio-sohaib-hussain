@@ -20,8 +20,8 @@ export const socialLinks = [
     icon: "github",
   },
   {
-    href: SITE_NAP.profiles.x,
-    icon: "x",
+    href: SITE_NAP.profiles.instagram,
+    icon: "instagram",
   },
 ]
 
@@ -39,8 +39,8 @@ export const FooterV2: React.FC = () => {
           <ul className="flex flex-col justify-between gap-5.5 border-b border-gray-500 pb-6 text-sm md:flex-row md:items-center md:gap-8">
             <li className="flex flex-col gap-1 md:gap-2">
               <span className="text-gray-500">Email</span>
-              <Link href="mailto:austin@serbyte.net" className="w-fit text-sm transition-colors duration-200 hover:text-gray-300">
-                austin@serbyte.net
+              <Link href="mailto:sohaibhussain456@gmail.com" className="w-fit text-sm transition-colors duration-200 hover:text-gray-300">
+                sohaibhussain456@gmail.com
               </Link>
             </li>
             {/* <li className="flex flex-col gap-1 md:gap-2">
@@ -73,21 +73,20 @@ export const FooterV2: React.FC = () => {
         <div className="flex flex-col-reverse justify-between gap-2 text-xs text-nowrap md:flex-row">
           <div className="flex items-center gap-5.5 max-sm:flex-wrap">
             <h3>
-              <span className="text-[#b8b8b8]">Based in </span> Seattle, Washington, USA
+              <span className="text-[#b8b8b8]">Based in </span> Okara, Pakistan
             </h3>
-            <div className="flex gap-4">
-              {/* <Link href="/terms-of-service" className="text-sm transition-colors duration-200 hover:text-gray-300">
-                Terms of Service
-              </Link>
-              <Link href="/privacy-policy" className="text-sm transition-colors duration-200 hover:text-gray-300">
-                Privacy Policy
-              </Link> */}
-            </div>
+            <span className="text-[#555] max-sm:hidden">|</span>
+            <h3>
+              <span className="text-[#b8b8b8]">Inspired by </span>
+              <a href="https://github.com/Austin1serb/portfolio-austin-serb" target="_blank" rel="noreferrer" className="underline transition-colors duration-200 hover:text-gray-300">
+                Austin Serb
+              </a>
+            </h3>
           </div>
-          <span className="text-[#b8b8b8]">© 2025 Austin Serb</span>
+          <span className="text-[#b8b8b8]">© 2026 Sohaib Hussain Shah</span>
         </div>
-        <h2 className="large-brand-text absolute -bottom-16 left-0 flex w-full items-center justify-center font-medium whitespace-nowrap text-white md:text-[180px] lg:text-[240px]">
-          Austin Serb
+        <h2 className="large-brand-text absolute -bottom-12 left-0 flex w-full items-center justify-center font-medium whitespace-nowrap text-white md:text-[180px] lg:text-[240px]">
+          BEYOND LIMITS
         </h2>
       </div>
     </footer>
