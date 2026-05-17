@@ -34,7 +34,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
               <Text as="h2" size="lg" className="font-medium">
                 Sohaib Hussain Shah
               </Text>
-              <p className="text-sm text-gray-500 font-medium">Senior Software Engineer & Associate Team Lead</p>
+              <p className="text-sm text-gray-500 font-medium">Software Engineer & Associate Team Lead</p>
 
               {/* Social Links */}
               <div className="mt-5 flex flex-wrap items-center gap-3">

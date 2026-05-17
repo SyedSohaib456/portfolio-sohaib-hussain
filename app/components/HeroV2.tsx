@@ -27,7 +27,7 @@ export const HeroV2 = () => {
           </h1>
 
           <AnimatedElement element="p" delay={0.6} className="max-w-xs text-sm leading-snug tracking-tight text-slate-700 md:max-w-sm md:pr-4 md:text-base">
-            <strong className="font-semibold text-slate-900">Senior Software Engineer.</strong> Associate Team Lead at{" "}
+            <strong className="font-semibold text-slate-900">Software Engineer.</strong> Associate Team Lead at{" "}
             <span className="font-semibold text-slate-900">Dev Entity</span>. Building production-grade mobile and web apps for global users.
           </AnimatedElement>
 

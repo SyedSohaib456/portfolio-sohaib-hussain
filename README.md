@@ -1,4 +1,4 @@
-# 🚀 Sohaib Hussain Shah — Senior Software Engineer Portfolio
+# 🚀 Sohaib Hussain Shah — Software Engineer Portfolio
 
 A premium, highly interactive, and developer-grade portfolio designed and engineered to showcase high-performance software craftsmanship.
 
@@ -46,7 +46,7 @@ This codebase features fully custom interactive detail pages for core engineerin
 
 ## 📈 Professional Profile
 
-*   **Title:** Senior Software Engineer & Associate Team Lead
+*   **Title:** Software Engineer & Associate Team Lead
 *   **Company:** Dev Entity (leading an agile frontend squad of 3-5 engineers)
 *   **Focus:** React Native, Expo, Frontend Web Performance, Sprint Leadership, Code Reviews
 *   **Location:** Okara, Pakistan
