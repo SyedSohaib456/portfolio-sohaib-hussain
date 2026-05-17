@@ -1,6 +1,5 @@
 "use client"
 import React from "react"
-import Image from "next/image"
 import { ProjectHero } from "./ProjectHero"
 import { LargeReview } from "../LargeReview"
 import { MoreProjectsSection } from "./MoreProjectsSection"
@@ -11,6 +10,18 @@ import clsx from "clsx"
 
 const ProjectDisplay: React.FC<{ projectData: ProjectData }> = ({ projectData }) => {
   const images = projectData.showcaseImages || []
+
+  // Intelligently categorize images into mobile (portrait) and desktop (landscape) showcases
+  const mobileImages = images.filter(
+    (img) =>
+      img.src.includes("/app/") ||
+      img.src.includes("mobile") ||
+      img.src.includes("Kids") ||
+      img.src.includes("reciters") ||
+      img.src.includes("surah")
+  )
+
+  const desktopImages = images.filter((img) => !mobileImages.includes(img))
 
   return (
     <main className="overflow-hidden bg-[#fafafa]">
@@ -28,51 +39,78 @@ const ProjectDisplay: React.FC<{ projectData: ProjectData }> = ({ projectData })
         <ProjectHero {...projectData.hero} />
       </div>
 
-      {/* Beautiful Minimalist Visual Showcase Gallery */}
+      {/* Project Showcase Gallery */}
       {images.length > 0 && (
-        <section className="inside-container-large pb-20 md:pb-32">
-          <div className="mb-8 flex flex-col items-start gap-1">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Visual Showcase</span>
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Mockups & Interface Design</h2>
-          </div>
+        <section className="inside-container-large pb-24 md:pb-36 flex flex-col gap-20 md:gap-32">
+          {/* MOBILE EXPERIENCE SHOWCASE */}
+          {mobileImages.length > 0 && (
+            <div className="flex flex-col gap-10">
+              <div className="flex flex-col items-start gap-1">
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">Mobile Experience</span>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Handheld Interface & App Flow</h2>
+              </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8">
-            {images.map((img, index) => {
-              // Intelligently detect portrait aspect ratio (mobile screenshots) to arrange side-by-side
-              const isPortrait =
-                img.src.includes("/app/") ||
-                img.src.includes("mobile") ||
-                img.src.includes("Kids") ||
-                img.src.includes("reciters") ||
-                img.src.includes("surah")
-
-              return (
-                <div
-                  key={index}
-                  className={clsx(
-                    "group flex flex-col gap-3 rounded-3xl border border-slate-100 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-md",
-                    isPortrait ? "col-span-1 md:col-span-6" : "col-span-full"
-                  )}
-                >
-                  <div className="relative overflow-hidden rounded-2xl bg-slate-50/50 aspect-video flex items-center justify-center">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      className="max-h-full max-w-full object-contain duration-500 group-hover:scale-[1.02]"
-                    />
-                  </div>
-                  {img.caption && (
-                    <div className="px-2 pt-1 pb-1">
-                      <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">
+              {/* Proportional Mobile Grid showing screens as real phone previews */}
+              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:gap-8 justify-items-center">
+                {mobileImages.map((img, index) => (
+                  <div key={index} className="group flex flex-col items-center gap-4 w-full max-w-[280px]">
+                    <div className="relative w-full aspect-[9/19.5] overflow-hidden rounded-[2.2rem] border-[6px] border-slate-950 bg-slate-950 shadow-[0_20px_50px_rgba(0,0,0,0.18)] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.28)]">
+                      {/* Realistic phone notch/island */}
+                      <div className="absolute top-2.5 left-1/2 z-20 h-4 w-16 -translate-x-1/2 rounded-full bg-slate-950" />
+                      
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    {img.caption && (
+                      <span className="px-2 text-center text-[10px] font-bold uppercase tracking-wider text-slate-400">
                         {img.caption}
                       </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* DESKTOP/WEB EXPERIENCE SHOWCASE */}
+          {desktopImages.length > 0 && (
+            <div className="flex flex-col gap-12">
+              <div className="flex flex-col items-start gap-1">
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">Web Experience</span>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">Desktop Interface & Controls</h2>
+              </div>
+
+              {/* Renders desktop screens inside realistic mock browser window frames */}
+              <div className="flex flex-col gap-16 md:gap-24">
+                {desktopImages.map((img, index) => (
+                  <div key={index} className="group flex flex-col gap-4">
+                    <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-2xl transition-transform duration-500 hover:scale-[1.005]">
+                      {/* Mock Safari/Chrome Browser Header */}
+                      <div className="flex items-center gap-1.5 bg-slate-50 px-4 py-3.5 border-b border-slate-200/60">
+                        <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+                        <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
+                        <div className="mx-auto -ml-9 text-[11px] font-semibold text-slate-400 tracking-wide uppercase">
+                          {img.caption || "Web Application"}
+                        </div>
+                      </div>
+
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full h-auto object-cover"
+                      />
                     </div>
-                  )}
-                </div>
-              )
-            })}
-          </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       )}
 
