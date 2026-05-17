@@ -1,12 +1,11 @@
 import { StaticImageData } from "next/image"
 import { Card } from "@/app/components/ProjectCard/Card"
-import iaoPreview from "@/app/images/iao-preview-v2.webp"
-import bespokePreview from "@/app/images/bespoke-preview-v2.webp"
-import automedicsPreview from "@/app/images/automedics-preview-v2.webp"
-import entitledPreview from "@/app/images/entitled-preview-v2.webp"
-import IconSpritePreview from "@/app/images/zero-icon-sprite-preview.jpg"
-import zeroPreview from "@/app/images/react-zero-ui-preview.jpg"
-import vetsChoiceInsurancePreview from "@/images/vets-choice-insurance-preview.webp"
+import iaoPreview from "@/public/assets/projects/iron-and-oak/preview.webp"
+import bespokePreview from "@/public/assets/projects/bespoke/preview.webp"
+import automedicsPreview from "@/public/assets/projects/automedics/preview.webp"
+import easyQuranPreview from "@/public/assets/projects/easyquran/preview.png"
+import watchbotsPreview from "@/public/assets/projects/watchbots/preview.png"
+import entitledPreview from "@/public/assets/projects/entitled/preview.webp"
 import { Link } from "@/app/utils/Link"
 import { externalLinks, SITE_SLUGS } from "@/config/siteConfig"
 
@@ -25,16 +24,28 @@ type StaticProject = {
 
 export const STATIC_PROJECTS: StaticProject[] = [
   {
-    id: "react-zero-ui",
-    src: zeroPreview,
-    alt: "React-Zero-UI - Preview",
-    color: "#3B06D1",
-    type: "Zero Re-Render State Library",
-    text: "View on GitHub",
-    href: externalLinks.zeroCore,
-    dataText: "View on GitHub",
-    ariaLabel: "View React Zero UI on GitHub",
-    isExternal: true,
+    id: "easyquran-ai",
+    src: easyQuranPreview,
+    alt: "EasyQuran AI - Preview",
+    color: "#16a34a",
+    type: "Mobile App Development",
+    text: "See Case Study",
+    href: "/projects/easyquran-ai",
+    dataText: "See Case Study",
+    ariaLabel: "See EasyQuran AI Case Study",
+    isExternal: false,
+  },
+  {
+    id: "watchbots",
+    src: watchbotsPreview,
+    alt: "Watchbots Preview",
+    color: "#4f46e5",
+    type: "AI Dashboard",
+    text: "See Case Study",
+    href: "/projects/watchbots",
+    dataText: "See Case Study",
+    ariaLabel: "See Watchbots Case Study",
+    isExternal: false,
   },
   {
     id: "bespoke",
@@ -49,44 +60,6 @@ export const STATIC_PROJECTS: StaticProject[] = [
     isExternal: false,
   },
   {
-    id: "vets-choice",
-    src: vetsChoiceInsurancePreview,
-    alt: "Vets Choice Insurance Preview",
-    color: "#DA961AA5",
-    type: "Pet Insurance Website",
-    text: "View Website",
-    href: externalLinks.vetsChoice,
-    dataText: "View Website",
-    ariaLabel: "View Vets Choice Insurance Website",
-    isExternal: true,
-  },
-  {
-    id: "zero-icon-sprite",
-    src: IconSpritePreview,
-    alt: "Zero-Icon-Sprite Preview",
-    color: "#3B06D1A5",
-    type: "SVG Build Tool",
-    text: "View on GitHub",
-    href: externalLinks.zeroIconSprite,
-    dataText: "View on GitHub",
-    ariaLabel: "View React Zero UI Icon Sprite on GitHub",
-    isExternal: true,
-  },
-
-  {
-    id: "automedics",
-    src: automedicsPreview,
-    alt: "Automedics Preview",
-    color: "#000000",
-    type: "Automotive Repair Website",
-    text: "See Case Study",
-    href: SITE_SLUGS.projectLinks.automedics,
-    dataText: "See Case Study",
-    ariaLabel: "See Automedics Website Build Case Study",
-    isExternal: false,
-  },
-
-  {
     id: "iron-oak",
     src: iaoPreview,
     alt: "IAO Preview",
@@ -97,18 +70,6 @@ export const STATIC_PROJECTS: StaticProject[] = [
     dataText: "See Case Study",
     ariaLabel: "See Iron & Oak Website Build Case Study",
     isExternal: false,
-  },
-  {
-    id: "entitled",
-    src: entitledPreview,
-    alt: "Entitled Preview",
-    color: "#DA961AA5",
-    type: "Event Management Web App",
-    text: "View Website",
-    href: externalLinks.entitled,
-    dataText: "View Website",
-    ariaLabel: "View Entitled Website",
-    isExternal: true,
   },
 ]
 

@@ -1,18 +1,20 @@
 import { StaticImageData } from "next/image"
 import { TintSimulator } from "../components/BespokeTint/TintSimulator"
 import { Phase } from "../components/ProjectSection/ApproachSection"
-import heroBefore from "@/public/assets/bespoke-hero-before.png"
-import heroBeforeMobile from "@/public/assets/bespoke-hero-mobile.png"
-import heroBeforeAutomedics from "@/public/assets/automedics-before.png"
-import heroBeforeMobileAutomedics from "@/public/assets/automedics-mobile.png"
+import heroBefore from "@/public/assets/projects/bespoke/hero-before.png"
+import heroBeforeMobile from "@/public/assets/projects/bespoke/hero-mobile.png"
+import heroBeforeAutomedics from "@/public/assets/projects/automedics/before.png"
+import heroBeforeMobileAutomedics from "@/public/assets/projects/automedics/mobile.png"
 import { AnalyticCardProps } from "../components/ProjectSection/ResultsSection"
 import { TrafficBarChart } from "../components/ProjectSection/TrafficBarChart"
 import { RadialProgressRing } from "../components/ProjectSection/RadialProgressRing"
 import { LineChart } from "../components/ProjectSection/LineChart"
 import { REVIEW_MAP, type ReviewProps } from "./review-data"
-import heroBeforeIao from "@/public/assets/iron-and-oak-before-website-design.jpg"
-import heroBeforeMobileIao from "@/public/assets/iron-and-oak-before-website-design-mobile.jpg"
+import heroBeforeIao from "@/public/assets/projects/iron-and-oak/iron-and-oak-before-website-design.jpg"
+import heroBeforeMobileIao from "@/public/assets/projects/iron-and-oak/iron-and-oak-before-website-design-mobile.jpg"
 import { ApproachTabsImage } from "../components/ProjectSection/ApproachTabsImage"
+import easyQuranPreview from "@/public/assets/projects/easyquran/preview.png"
+import watchbotsPreview from "@/public/assets/projects/watchbots/preview.png"
 
 //   interface ProjectData {
 //   hero: {
@@ -130,7 +132,7 @@ export const bespoke: ProjectData = {
         "Incorporated angular elements instead of traditional straight lines",
       ],
       icon: "/assets/design-black.webp",
-      feature: <ApproachTabsImage src="/assets/brand-images.jpg" alt="Competitor Analysis" />,
+      feature: <ApproachTabsImage src="/assets/projects/bespoke/brand-images.jpg" alt="Competitor Analysis" />,
     },
     {
       id: 2,
@@ -170,7 +172,7 @@ export const bespoke: ProjectData = {
         "Implemented technical SEO best practices",
       ],
       icon: "/assets/search-black.webp",
-      feature: <ApproachTabsImage src="/assets/competitor-analysis.png" alt="Competitor Analysis" />,
+      feature: <ApproachTabsImage src="/assets/projects/bespoke/competitor-analysis.png" alt="Competitor Analysis" />,
     },
     {
       id: 4,
@@ -186,7 +188,7 @@ export const bespoke: ProjectData = {
         "Established the business as the local authority on tinting",
       ],
       icon: "/assets/notepad-black.webp",
-      feature: <ApproachTabsImage src="/assets/washington-vehicle-tint-law-illustration.webp" alt="Tint Law Article" />,
+      feature: <ApproachTabsImage src="/assets/projects/bespoke/washington-vehicle-tint-law-illustration.webp" alt="Tint Law Article" />,
     },
     {
       id: 5,
@@ -263,7 +265,7 @@ export const automedicsKirkland: ProjectData = {
         "Developed consistent visual language across all touchpoints",
       ],
       icon: "/assets/design-black.webp",
-      feature: <ApproachTabsImage src="/assets/automedics-brand-guide-example.webp" alt="AutoMedics Brand Identity" />,
+      feature: <ApproachTabsImage src="/assets/projects/automedics/automedics-brand-guide-example.webp" alt="AutoMedics Brand Identity" />,
     },
     {
       id: 2,
@@ -277,7 +279,7 @@ export const automedicsKirkland: ProjectData = {
         "Progressive web app features for mobile users",
       ],
       icon: "/assets/tool-black.webp",
-      feature: <ApproachTabsImage src="/assets/performance-metrics-automedics-web-development.webp" alt="Performance Metrics" />,
+      feature: <ApproachTabsImage src="/assets/projects/automedics/performance-metrics-automedics-web-development.webp" alt="Performance Metrics" />,
     },
     {
       id: 3,
@@ -291,7 +293,7 @@ export const automedicsKirkland: ProjectData = {
         "Optimized every asset for web without quality loss",
       ],
       icon: "/assets/assets-black-camera.webp",
-      feature: <ApproachTabsImage src="/assets/trust-badges-automedics-web-design.webp" alt="AutoMedics Visual Assets" />,
+      feature: <ApproachTabsImage src="/assets/projects/automedics/trust-badges-automedics-web-design.webp" alt="AutoMedics Visual Assets" />,
     },
     {
       id: 4,
@@ -305,7 +307,7 @@ export const automedicsKirkland: ProjectData = {
         "Added a Google Business Profile badge to the services page",
       ],
       icon: "/assets/notepad-black.webp",
-      feature: <ApproachTabsImage src="/assets/review-showcase-automedics-website-design.webp" alt="Review Showcase" />,
+      feature: <ApproachTabsImage src="/assets/projects/automedics/review-showcase-automedics-website-design.webp" alt="Review Showcase" />,
     },
   ],
   review: REVIEW_MAP.automedics,
@@ -370,7 +372,7 @@ export const iao: ProjectData = {
         "Created a brand guidelines document",
       ],
       icon: "/assets/design-black.webp",
-      feature: <ApproachTabsImage src="/assets/iron-and-oak-brand-guide-web-design.png" alt="Iron & Oak Brand Identity" />,
+      feature: <ApproachTabsImage src="/assets/projects/iron-and-oak/iron-and-oak-brand-guide-web-design.png" alt="Iron & Oak Brand Identity" />,
     },
     {
       id: 2,
@@ -379,7 +381,7 @@ export const iao: ProjectData = {
       description: "We created a live incident data dashboard that displays incidents in real-time, connected to a live incident data API.",
       details: ["Airtable API integration for incident data", "Displays incidents in real-time"],
       icon: "/assets/tool-black.webp",
-      feature: <ApproachTabsImage src="/assets/iron-and-oak-website-tool.png" alt="Iron & Oak Website Tool" className="bg-slate-800 px-2.5" />,
+      feature: <ApproachTabsImage src="/assets/projects/iron-and-oak/iron-and-oak-website-tool.png" alt="Iron & Oak Website Tool" className="bg-slate-800 px-2.5" />,
     },
     {
       id: 3,
@@ -394,7 +396,7 @@ export const iao: ProjectData = {
       ],
       icon: "/assets/assets-black-camera.webp",
       feature: (
-        <ApproachTabsImage src="/assets/iron-and-oak-media-coverage-website-research.png" alt="Iron & Oak Media Coverage" className="bg-slate-200 px-2.5" />
+        <ApproachTabsImage src="/assets/projects/iron-and-oak/iron-and-oak-media-coverage-website-research.png" alt="Iron & Oak Media Coverage" className="bg-slate-200 px-2.5" />
       ),
     },
     {
@@ -408,7 +410,7 @@ export const iao: ProjectData = {
         "Internal links (pillar/support) speed indexation",
       ],
       icon: "/assets/notepad-black.webp",
-      feature: <ApproachTabsImage src="/assets/iron-and-oak-content-cluster-seo.png" alt="Iron & Oak Content Cluster SEO" />,
+      feature: <ApproachTabsImage src="/assets/projects/iron-and-oak/iron-and-oak-content-cluster-seo.png" alt="Iron & Oak Content Cluster SEO" />,
     },
     {
       id: 5,
@@ -422,8 +424,115 @@ export const iao: ProjectData = {
         "Resume later via stored progress state",
       ],
       icon: "/assets/search-black.webp",
-      feature: <ApproachTabsImage src="/assets/iron-and-oak-job-application-portal-web-design.png" alt="Iron & Oak Applicant Portal" />,
+      feature: <ApproachTabsImage src="/assets/projects/iron-and-oak/iron-and-oak-job-application-portal-web-design.png" alt="Iron & Oak Applicant Portal" />,
     },
   ],
   review: REVIEW_MAP.iao,
+}
+export const easyQuranAI: ProjectData = {
+  hero: {
+    title: "Revolutionizing Quran Learning with EasyQuran AI",
+    client: "EasyQuran AI",
+    year: "2025",
+    description: (
+      <>
+        Built and released production-grade mobile applications on the <span className="font-semibold">App Store and Google Play</span>. The platform combines advanced AI with a seamless user experience to make Quran learning accessible, featuring real-time recitations and translations.
+      </>
+    ),
+    categories: ["React Native", "Expo", "Mobile Development", "AI Integration"],
+    link: "https://www.easyquran.ai/",
+  },
+  slug: "easyquran-ai",
+  beforeAfter: {
+    heroBefore: easyQuranPreview,
+    beforeAltText: "EasyQuran AI App Preview",
+    beforeMobileAltText: "EasyQuran AI Mobile Preview",
+    heroBeforeMobile: easyQuranPreview,
+    afterAltText: "EasyQuran AI Production Release",
+  },
+  results: [
+    {
+      title: "App Downloads",
+      description: "Increase post-launch",
+      percentageIncrease: 500,
+      chart: <TrafficBarChart startValue={0} endValue={5000} />,
+      dataSource: "App Store & Play Store Analytics",
+    },
+    {
+      title: "User Retention",
+      description: "Active daily users growth",
+      percentageIncrease: 65,
+      chart: <RadialProgressRing percentage={65} />,
+      dataSource: "Measured over a 90 day period",
+    },
+    {
+      title: "Performance",
+      description: "App responsiveness improvement",
+      percentageIncrease: 40,
+      chart: <LineChart />,
+      dataSource: "Vitals and crash reporting",
+    },
+  ],
+  phases: [
+    {
+      id: 1,
+      title: "Architecture",
+      subtitle: "Scalable Mobile Foundation",
+      description: "Designed a robust architecture using React Native and Expo, ensuring seamless cross-platform performance and easy maintenance.",
+      details: ["Implemented atomic design system for components", "Configured Expo dev-client for custom native modules", "Set up automated CI/CD for store deployments"],
+      icon: "/assets/tool-black.webp",
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/preview.png" alt="App Architecture" />,
+    },
+  ],
+  review: {
+    quote: "Sohaib's expertise in React Native was crucial for the successful launch of EasyQuran AI. He delivered a high-quality product that exceeded our expectations.",
+    name: "Product Owner",
+    title: "EasyQuran AI",
+    img: "/assets/projects/easyquran/preview.png",
+  },
+}
+
+export const watchbots: ProjectData = {
+  hero: {
+    title: "AI-Driven Monitoring with Watchbots",
+    client: "Watchbots",
+    year: "2025",
+    description: "Developed a comprehensive AI monitoring platform that provides real-time analytics and bot management. The platform features a high-performance dashboard with complex data visualizations.",
+    categories: ["Next.js", "AI", "Dashboard", "Real-time Analytics"],
+    link: "https://watchbots.vercel.app/",
+  },
+  slug: "watchbots",
+  beforeAfter: {
+    heroBefore: watchbotsPreview,
+    beforeAltText: "Watchbots Dashboard Preview",
+    beforeMobileAltText: "Watchbots Mobile Preview",
+    heroBeforeMobile: watchbotsPreview,
+    afterAltText: "Watchbots Live Platform",
+  },
+  results: [
+    {
+      title: "Monitoring Efficiency",
+      description: "Reduction in response time",
+      percentageIncrease: 80,
+      chart: <TrafficBarChart startValue={100} endValue={20} />,
+      dataSource: "System logs analysis",
+    },
+  ],
+  phases: [
+    {
+      id: 1,
+      title: "Dashboard Design",
+      subtitle: "Data-Rich Visualizations",
+      description: "Created a premium dashboard using Next.js and high-performance charting libraries to provide real-time insights.",
+      details: ["Integrated real-time websocket data feeds", "Optimized complex charts for performance", "Implemented sleek dark mode design"],
+      icon: "/assets/design-black.webp",
+      feature: <ApproachTabsImage src="/assets/projects/watchbots/preview.png" alt="Dashboard Design" />,
+    },
+  ],
+  review: {
+    quote: "The Watchbots platform is a game-changer for our monitoring needs. Sohaib's attention to detail and technical skill are evident in every part of the dashboard.",
+    name: "Lead Engineer",
+    title: "Watchbots",
+    img: "/assets/projects/watchbots/preview.png",
+  },
 }

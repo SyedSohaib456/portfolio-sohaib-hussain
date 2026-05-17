@@ -11,7 +11,7 @@ export interface ReviewProps {
 export const REVIEWS = [
   {
     id: "entitled",
-    img: "/client-photos/yassine-rhamani-profile-photo.jpeg",
+    img: "/assets/clients/yassine-rhamani-profile-photo.jpeg",
     name: "Yassine Ramani",
     title: "CEO, Entitled",
     quote:
@@ -19,7 +19,7 @@ export const REVIEWS = [
   },
   {
     id: "herba-naturals",
-    img: "/brands/herba-naturals-logo.png",
+    img: "/assets/profile.webp",
     name: "Sami Raheem",
     title: "Owner, Herba Naturals",
     quote:
@@ -27,7 +27,7 @@ export const REVIEWS = [
   },
   {
     id: "vets-choice",
-    img: "/brands/vets-choice-insurance-logo.png",
+    img: "/assets/projects/vets-choice/preview.webp",
     name: "Rob Dow",
     title: "Co-Founder, Vets Choice Insurance",
     quote:
@@ -35,7 +35,7 @@ export const REVIEWS = [
   },
   {
     id: "bespoke",
-    img: "/client-photos/bespoke-tint-owner-kris-256.webp",
+    img: "/assets/clients/bespoke-tint-owner-kris-256.webp",
     name: "Kris Meyer",
     title: "Owner, Bespoke Tint",
     quote:
@@ -43,7 +43,7 @@ export const REVIEWS = [
   },
   {
     id: "iao",
-    img: "/client-photos/aleksandr-butowicz-iron-oak-profile-photo.jpg",
+    img: "/assets/clients/aleksandr-butowicz-iron-oak-profile-photo.jpg",
     name: "Aleks Butokowitz",
     title: "CEO, Iron & Oak",
     quote:
@@ -55,7 +55,7 @@ export const REVIEWS = [
     name: "Jeff Egbert",
     title: "Owner, Automedics Kirkland",
     quote: "Austin built our website fast and it works flawlessly. He is always available to answer questions or solve problems. Great experience.",
-    img: "/assets/automedics-logo-optimized.png",
+    img: "/assets/projects/automedics/preview.webp",
   },
 ] as const satisfies readonly ReviewProps[]
 
