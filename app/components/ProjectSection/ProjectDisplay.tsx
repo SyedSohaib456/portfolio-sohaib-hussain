@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import Image from "next/image"
 import { ProjectHero } from "./ProjectHero"
 import { LargeReview } from "../LargeReview"
 import { MoreProjectsSection } from "./MoreProjectsSection"
@@ -10,6 +11,7 @@ import clsx from "clsx"
 
 const ProjectDisplay: React.FC<{ projectData: ProjectData }> = ({ projectData }) => {
   const images = projectData.showcaseImages || []
+  const heroImage = projectData.beforeAfter?.heroBefore
 
   // Bulletproof categorization: Mobile images are stored in '/app/' folders, others are Web/Desktop
   const mobileImages = images.filter(
@@ -32,9 +34,44 @@ const ProjectDisplay: React.FC<{ projectData: ProjectData }> = ({ projectData })
       />
 
       {/* Project Hero Header */}
-      <div className="pt-24 pb-16 md:pt-32 md:pb-24">
+      <div className="pt-24 pb-8 md:pt-32 md:pb-12">
         <ProjectHero {...projectData.hero} />
       </div>
+
+      {/* High-Impact Centerpiece Hero Mockup */}
+      {heroImage && (
+        <section className="inside-container-large pb-20 md:pb-28">
+          {projectData.slug === "easyquran-ai" ? (
+            /* Composed Mockup composition for Mobile App centerpiece */
+            <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-2xl transition-transform duration-500 hover:scale-[1.005]">
+              <Image
+                src={heroImage}
+                alt={`${projectData.hero.title} Centerpiece Mockup`}
+                priority
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          ) : (
+            /* Premium Web Dashboard centerpiece inside Safari browser frame */
+            <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-2xl transition-transform duration-500 hover:scale-[1.005]">
+              <div className="flex items-center gap-1.5 bg-slate-50 px-4 py-3.5 border-b border-slate-200/60">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+                <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
+                <div className="mx-auto -ml-9 text-[11px] font-semibold text-slate-400 tracking-wide uppercase">
+                  {projectData.hero.client} · Platform Live Dashboard
+                </div>
+              </div>
+              <Image
+                src={heroImage}
+                alt={`${projectData.hero.title} Web Interface`}
+                priority
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Project Showcase Gallery */}
       {images.length > 0 && (

@@ -569,15 +569,23 @@ export const easyQuranAI: ProjectData = {
     img: "/assets/projects/easyquran/app/preview.png",
   },
   showcaseImages: [
+    // 8 Mobile App Screens
     { src: "/assets/projects/easyquran/app/home.png", alt: "EasyQuran AI - Mobile App Home Screen", caption: "App Home & Recitation Tracker View" },
     { src: "/assets/projects/easyquran/app/reciters.png", alt: "EasyQuran AI - Reciter Selection", caption: "High-Fidelity Audio Reciter Selection Interface" },
     { src: "/assets/projects/easyquran/app/surah.png", alt: "EasyQuran AI - Surah Player Screen", caption: "Continuous Audio Player & Surah Reading View" },
     { src: "/assets/projects/easyquran/app/kidsQuran.png", alt: "EasyQuran AI - Kids Quran Section", caption: "Interactive Children Learning Portal" },
+    { src: "/assets/projects/easyquran/app/audiobooks.png", alt: "EasyQuran AI - Kids Quranic Audiobooks", caption: "Vibrant Narrated Islamic Stories for Children" },
+    { src: "/assets/projects/easyquran/app/scripts.png", alt: "EasyQuran AI - Quranic Arabic Script Selector", caption: "Uthmani & IndoPak Script Style Selector" },
+    { src: "/assets/projects/easyquran/app/typographySettings.png", alt: "EasyQuran AI - Typography Font Controls", caption: "Custom Arabic Font Sizes & Theme Controls" },
+    { src: "/assets/projects/easyquran/app/preview.png", alt: "EasyQuran AI - App Interface Showcase", caption: "Interactive App Navigation & Reading Dashboard" },
+
+    // 6 Web App Screens
     { src: "/assets/projects/easyquran/web/preview.png", alt: "EasyQuran AI - Responsive Web Dashboard Preview", caption: "Unified Web Platform for Desktop Viewports" },
     { src: "/assets/projects/easyquran/web/home.png", alt: "EasyQuran AI - Web Application Home Screen", caption: "Web App Main Navigation & Reading Console" },
     { src: "/assets/projects/easyquran/web/surah.png", alt: "EasyQuran AI - Web Surah Interface", caption: "Multi-script Typography Surah Display on Web" },
     { src: "/assets/projects/easyquran/web/translation.png", alt: "EasyQuran AI - Web Translation Panel", caption: "Integrated Multi-language Translation Layout" },
-    { src: "/assets/projects/easyquran/web/audio.png", alt: "EasyQuran AI - Web Audio Selection", caption: "Seamless Audio Stream Selector on Web" }
+    { src: "/assets/projects/easyquran/web/audio.png", alt: "EasyQuran AI - Web Audio Selection", caption: "Seamless Audio Stream Selector on Web" },
+    { src: "/assets/projects/easyquran/web/name.png", alt: "EasyQuran AI - Web Surah Name Selector", caption: "Surah Chapter & Juz Quick Navigation Index" }
   ],
 }
 
