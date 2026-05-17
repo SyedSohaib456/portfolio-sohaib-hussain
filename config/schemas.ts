@@ -13,57 +13,18 @@ interface ProjectItem {
 // Project data for schema
 const projectsData: ProjectItem[] = [
   {
-    name: "React Zero-UI",
-    url: externalLinks.zeroCore, // external canonical
-    date: "2025-06-01",
-    description: "Zero Re-Render State Library",
-    type: "SoftwareSourceCode",
-  },
-  {
-    name: "Bespoke Tint & PPF",
-    url: SITE_SLUGS.projectLinks.bespoke, // internal case study
-    external: "https://www.bespokeauto.org", // client site
-    date: "2025-03-11",
-    description: "Automotive Styling Website",
-    type: "WebSite",
-  },
-
-  {
-    name: "Automedics",
-    url: SITE_SLUGS.projectLinks.automedics, // internal case study
-    external: "https://www.automedicskirkland.com",
-    date: "2024-12-02",
-    description: "Automotive Repair Website",
-    type: "WebSite",
-  },
-  {
-    name: "Iron & Oak",
-    url: SITE_SLUGS.projectLinks.iao, // internal case study
-    external: "https://ironandoaksecurity.com",
-    date: "2024-06-15",
-    description: "Private Security Website",
-    type: "WebSite",
-  },
-  {
-    name: "Vets Choice Insurance",
-    url: externalLinks.vetsChoice, // external canonical
-    date: "2025-05-20",
-    description: "Pet Insurance Website",
-    type: "WebSite",
-  },
-  {
-    name: "Zero Icon Sprite",
-    url: externalLinks.zeroIconSprite, // external canonical
-    date: "2024-06-15",
-    description: "SVG Build Tool",
+    name: "EasyQuran AI",
+    url: "https://www.easyquran.ai/",
+    date: "2025-01-01",
+    description: "Production mobile & web application for Quran learning",
     type: "SoftwareApplication",
   },
   {
-    name: "Entitled",
-    url: externalLinks.entitled, // external canonical
-    date: "2024-02-10",
-    description: "Event Management Web App",
-    type: "WebApplication",
+    name: "Watchbots",
+    url: "https://watchbots.vercel.app/",
+    date: "2025-02-01",
+    description: "AI-driven monitoring platform",
+    type: "WebSite",
   },
 ]
 
@@ -127,7 +88,7 @@ export const projectsGraph: Graph = {
       "@type": "CollectionPage",
       "@id": `${SITE}${SITE_SLUGS.projects}#page`,
       url: `${SITE}${SITE_SLUGS.projects}`,
-      name: "Projects - Austin Serb",
+      name: "Projects - Sohaib Hussain Shah",
       isPartOf: { "@id": `${SITE}#website` },
       mainEntity: { "@id": `${SITE}${SITE_SLUGS.projects}#list` }, // <-- REFERENCES ABOVE
       mainEntityOfPage: `${SITE}${SITE_SLUGS.projects}`,
@@ -177,7 +138,7 @@ export const siteGraph = {
     {
       "@type": "Organization",
       "@id": `${SITE}#org`,
-      name: "Serbyte Development",
+      name: "Dev Entity",
       url: SITE,
       logo: { "@id": `${SITE}#logo` },
       sameAs: Object.values(SITE_NAP.profiles),
@@ -186,17 +147,17 @@ export const siteGraph = {
           "@type": "ContactPoint",
           contactType: "Hiring",
           email: `mailto:${SITE_NAP.email}`,
-          areaServed: "US",
+          areaServed: "PK",
           availableLanguage: ["en"],
         },
       ],
     },
     {
       "@type": "Person",
-      "@id": `${SITE}/#austin-serb`,
-      name: "Austin Serb",
+      "@id": `${SITE}/#sohaib-hussain-shah`,
+      name: "Sohaib Hussain Shah",
       url: SITE,
-      jobTitle: "Full-Stack Engineer",
+      jobTitle: "React Native & Front-End Engineer",
       image: { "@id": `${SITE}#headshot` },
       worksFor: { "@id": `${SITE}#org` },
       sameAs: Object.values(SITE_NAP.profiles),
@@ -206,7 +167,7 @@ export const siteGraph = {
       "@type": "WebSite",
       "@id": `${SITE}#website`,
       url: SITE,
-      name: "Austin Serb - Developer Portfolio",
+      name: "Sohaib Hussain Shah - Developer Portfolio",
       publisher: { "@id": `${SITE}#org` },
       inLanguage: "en",
     },
