@@ -14,29 +14,21 @@ export const HeroV2 = () => {
             className="z-2 inline-flex items-center gap-2 self-start rounded-full border border-gray-100 bg-white px-3 py-2 text-xs font-medium shadow-lg"
           >
             <ActivityDot />
-            Seattle, WA
+            Okara, Pakistan
           </AnimatedElement>
 
-          <h1 className="xs:text-5xl relative z-5 text-4xl leading-[1] font-medium tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
-            <AnimatedElement element="span" offsetPx={20} fadeDirection="left" className="inline-block">
-              Austin Serb
-            </AnimatedElement>{" "}
-            <br />
-            <AnimatedElement element="span" offsetPx={40} delay={0.2} fadeDirection="top" className="inline-block"></AnimatedElement>
-            <AnimatedElement element="span" delay={0.4} offsetPx={20} fadeDirection="left" className="inline-block text-slate-700">
+          <h1 className="xs:text-5xl relative z-5 text-4xl leading-[1.05] font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <AnimatedElement element="span" offsetPx={20} fadeDirection="left" className="block md:whitespace-nowrap">
+              Sohaib Hussain Shah
+            </AnimatedElement>
+            <AnimatedElement element="span" delay={0.4} offsetPx={20} fadeDirection="left" className="block text-slate-700 mt-1">
               Portfolio
             </AnimatedElement>
           </h1>
 
           <AnimatedElement element="p" delay={0.6} className="max-w-xs text-sm leading-snug tracking-tight text-slate-700 md:max-w-sm md:pr-4 md:text-base">
-            <strong className="font-semibold text-slate-900">Frontend-focused full stack developer.</strong> React & Next.js specialist. Creator of{" "}
-            <a href="https://github.com/react-zero-ui" target="_blank" rel="noopener" className="font-semibold text-slate-900">
-              React-Zero-UI
-            </a>
-            . Founder of{" "}
-            <a href="https://www.serbyte.net/" target="_blank" rel="noopener" className="font-semibold text-slate-900">
-              Serbyte Development
-            </a>
+            <strong className="font-semibold text-slate-900">Senior Software Engineer.</strong> Associate Team Lead at{" "}
+            <span className="font-semibold text-slate-900">Dev Entity</span>. Building production-grade mobile and web apps for global users.
           </AnimatedElement>
 
           <CallToActionButton />
