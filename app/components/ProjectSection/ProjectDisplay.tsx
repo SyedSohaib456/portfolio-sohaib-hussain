@@ -1,7 +1,9 @@
 "use client"
 import React from "react"
 import Image from "next/image"
-import { ProjectHero } from "./ProjectHero"
+import Link from "next/link"
+import { H1, Typography } from "@/app/ui/Elements"
+import { Icon } from "../Icon"
 import { LargeReview } from "../LargeReview"
 import { MoreProjectsSection } from "./MoreProjectsSection"
 import { ProjectData } from "../../data/project-data"
@@ -33,45 +35,89 @@ const ProjectDisplay: React.FC<{ projectData: ProjectData }> = ({ projectData })
         }}
       />
 
-      {/* Project Hero Header */}
-      <div className="pt-24 pb-8 md:pt-32 md:pb-12">
-        <ProjectHero {...projectData.hero} />
-      </div>
+      {/* Premium Editorial Split Hero Section */}
+      <section className="inside-container-large pt-24 pb-20 md:pt-32 md:pb-28">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-center">
+          {/* Left Column: Rich Typographic Content */}
+          <div className="lg:col-span-5 flex flex-col gap-6 items-start">
+            {/* Meta badges */}
+            <div className="flex items-center gap-3 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <span className="rounded-full bg-slate-100 px-3.5 py-1 text-slate-700">{projectData.hero.client}</span>
+              <span>•</span>
+              <span>{projectData.hero.year}</span>
+            </div>
 
-      {/* High-Impact Centerpiece Hero Mockup */}
-      {heroImage && (
-        <section className="inside-container-large pb-20 md:pb-28">
-          {projectData.slug === "easyquran-ai" ? (
-            /* Composed Mockup composition for Mobile App centerpiece */
-            <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-2xl transition-transform duration-500 hover:scale-[1.005]">
-              <Image
-                src={heroImage}
-                alt={`${projectData.hero.title} Centerpiece Mockup`}
-                priority
-                className="w-full h-auto object-cover"
-              />
+            <H1 variant="medium" className="wrap-break-word font-extrabold tracking-tight text-slate-900 leading-[1.1] text-3xl md:text-4xl lg:text-5xl">
+              {projectData.hero.title}
+            </H1>
+
+            <div className="h-0.5 w-12 bg-blue-600 rounded" />
+
+            <p className="text-base text-slate-650 leading-relaxed max-w-xl">
+              {projectData.hero.description}
+            </p>
+
+            {/* Scope of Work */}
+            <div className="flex flex-col gap-2 w-full">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Scope of Work</span>
+              <ul className="flex flex-wrap gap-2">
+                {projectData.hero.categories.map((item) => (
+                  <li key={item} className="rounded-full border border-slate-200/80 bg-white px-3.5 py-1 text-xs font-medium text-slate-800 shadow-sm">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          ) : (
-            /* Premium Web Dashboard centerpiece inside Safari browser frame */
-            <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-2xl transition-transform duration-500 hover:scale-[1.005]">
-              <div className="flex items-center gap-1.5 bg-slate-50 px-4 py-3.5 border-b border-slate-200/60">
-                <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
-                <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-                <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
-                <div className="mx-auto -ml-9 text-[11px] font-semibold text-slate-400 tracking-wide uppercase">
-                  {projectData.hero.client} · Platform Live Dashboard
+
+            {/* View Live Site Link */}
+            <Link
+              href={projectData.hero.link}
+              title={`View ${projectData.hero.client} live site`}
+              target="_blank"
+              rel="nofollow noopener"
+              className="mt-4 flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-350"
+            >
+              View Live Site
+              <Icon name="arrow-right" className="h-3.5 w-3.5 text-white" />
+            </Link>
+          </div>
+
+          {/* Right Column: Floating Visual Centerpiece Mockup */}
+          <div className="lg:col-span-7 w-full flex justify-center">
+            {heroImage && (
+              projectData.slug === "easyquran-ai" ? (
+                /* Composed Mobile Mockup display for Quran App */
+                <div className="relative w-full max-w-[560px] overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500 hover:scale-[1.01] hover:shadow-[0_30px_70px_rgba(0,0,0,0.18)]">
+                  <Image
+                    src={heroImage}
+                    alt={`${projectData.hero.title} Composed Mockup`}
+                    priority
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
-              </div>
-              <Image
-                src={heroImage}
-                alt={`${projectData.hero.title} Web Interface`}
-                priority
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          )}
-        </section>
-      )}
+              ) : (
+                /* Premium Safari Browser Frame for Web projects */
+                <div className="relative w-full overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500 hover:scale-[1.01] hover:shadow-[0_30px_70px_rgba(0,0,0,0.18)]">
+                  <div className="flex items-center gap-1.5 bg-slate-50 px-4 py-3 border-b border-slate-200/60">
+                    <div className="h-2 w-2 rounded-full bg-red-400" />
+                    <div className="h-2 w-2 rounded-full bg-yellow-400" />
+                    <div className="h-2 w-2 rounded-full bg-green-400" />
+                    <div className="mx-auto -ml-9 text-[10px] font-semibold text-slate-400 tracking-wider uppercase">
+                      {projectData.hero.client} Live Dashboard
+                    </div>
+                  </div>
+                  <Image
+                    src={heroImage}
+                    alt={`${projectData.hero.title} Dashboard Mockup`}
+                    priority
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Project Showcase Gallery */}
       {images.length > 0 && (

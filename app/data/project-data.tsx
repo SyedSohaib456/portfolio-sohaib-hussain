@@ -633,6 +633,13 @@ export const watchbots: ProjectData = {
     img: "/assets/projects/watchbots/preview.png",
   },
   showcaseImages: [
-    { src: "/assets/projects/watchbots/preview.png", alt: "Watchbots - AI Monitoring Dashboard", caption: "Real-Time AI-Driven Bot Monitoring Telemetry & Console" }
+    { src: "/assets/projects/watchbots/preview.png", alt: "Watchbots - AI Monitoring Dashboard", caption: "Real-Time AI-Driven Bot Monitoring Telemetry & Console" },
+    { src: "/assets/projects/watchbots/home.png", alt: "Watchbots - E-Commerce Landing Page", caption: "Premium Storefront Hub & Home Automation Showcase" },
+    { src: "/assets/projects/watchbots/projects.png", alt: "Watchbots - Automation Products Grid", caption: "Responsive Product Index & Smart Devices Explorer" },
+    { src: "/assets/projects/watchbots/achievements.png", alt: "Watchbots - Community & Achievements Hub", caption: "Interactive Gamified Achievements & User Milestones Dashboard" },
+    { src: "/assets/projects/watchbots/project-detail.png", alt: "Watchbots - Smart Home Kit Detail View", caption: "High-Performance Product Details Page & Specifications Inspector" },
+    { src: "/assets/projects/watchbots/cart.png", alt: "Watchbots - Shopping Cart Console", caption: "Interactive E-Commerce Shopping Cart & Quantities Manager" },
+    { src: "/assets/projects/watchbots/checkout.png", alt: "Watchbots - Secure Order Checkout", caption: "Validated Multi-Step Billing & Payment Form" },
+    { src: "/assets/projects/watchbots/wishlist.png", alt: "Watchbots - Personal Wishlist Explorer", caption: "Sleek User Wishlist & Favorite Automation Save Console" }
   ],
 }
