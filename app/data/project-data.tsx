@@ -458,10 +458,10 @@ export const easyQuranAI: ProjectData = {
     year: "2025",
     description: (
       <>
-        Built and released production-grade mobile applications on the <span className="font-semibold">App Store and Google Play</span>. The platform combines advanced AI with a seamless user experience to make Quran learning accessible, featuring real-time recitations and translations.
+        Designed, built, and launched a unified ecosystem featuring production-grade mobile applications on the <span className="font-semibold">App Store and Google Play</span> alongside a matching, fully responsive <span className="font-semibold">React Web Application</span>. The platform combines advanced AI integration with real-time audio streams, custom typography scripts, and instant word translation.
       </>
     ),
-    categories: ["React Native", "Expo", "Mobile Development", "AI Integration"],
+    categories: ["React Native", "Expo", "React (Web)", "Mobile & Web Development", "AI Integration"],
     link: "https://www.easyquran.ai/",
   },
   slug: "easyquran-ai",
