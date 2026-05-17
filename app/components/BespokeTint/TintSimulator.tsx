@@ -2,8 +2,8 @@
 import { useState, useMemo, memo } from "react"
 import { MotionDiv } from "@/app/utils/lazy-ui"
 import Image from "next/image"
-import teslaNoTint from "@/public/assets/tesla-no-tint.jpg"
-import tesla05 from "@/public/assets/tesla-05-tint.jpg"
+import teslaNoTint from "@/public/assets/projects/bespoke/tesla-no-tint.jpg"
+import tesla05 from "@/public/assets/projects/bespoke/tesla-05-tint.jpg"
 import clsx from "clsx"
 
 // Memoized image component
