@@ -26,7 +26,7 @@ export const Card = ({
             "absolute inset-0 overflow-hidden rounded-2xl opacity-90 contain-strict group-hover:opacity-0 after:absolute after:inset-0 after:z-4 after:rounded-2xl after:duration-200 after:content-['']"
           )}
           style={
-            { "--color-gradient": color, background: "linear-gradient(to top, var(--color-gradient), #00000056 25%, transparent 50%)" } as React.CSSProperties
+            { background: "linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 25%, transparent 50%)" } as React.CSSProperties
           }
         >
           <span className="absolute top-2 left-2 w-fit rounded-full border border-gray-700 bg-black px-4 py-2 text-xs shadow-md">{type}</span>
@@ -39,7 +39,7 @@ export const Card = ({
             {text}
           </span>
         </span>
-        <Image className="h-full w-full bg-gray-200" src={src} alt={alt} priority decoding="async" />
+        <Image className="h-full w-full bg-gray-200 object-cover" src={src} alt={alt} priority decoding="async" />
       </div>
     </div>
   )

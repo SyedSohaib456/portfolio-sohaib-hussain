@@ -2,7 +2,7 @@
 import { AnimatedCard, HeroOffset } from "./ProjectCard/AnimatedCard"
 import iaoPreview from "@/public/assets/projects/iron-and-oak/preview.webp"
 import bespokePreview from "@/public/assets/projects/bespoke/preview.webp"
-import easyQuranPreview from "@/public/assets/projects/easyquran/preview.png"
+import easyQuranPreview from "@/public/assets/projects/easyquran/app/preview.png"
 import watchbotsPreview from "@/public/assets/projects/watchbots/preview.png"
 import clsx from "clsx"
 import { useOffset } from "../hooks/useOffset"

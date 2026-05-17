@@ -67,6 +67,7 @@ export type ProjectData = {
   phases: Phase[]
   review: ReviewProps
   slug: string
+  showcaseImages?: { src: string; alt: string; caption?: string }[]
 }
 
 export const bespoke: ProjectData = {
@@ -206,6 +207,13 @@ export const bespoke: ProjectData = {
     },
   ],
   review: REVIEW_MAP.bespoke,
+  showcaseImages: [
+    { src: "/assets/projects/bespoke/hero-before.png", alt: "Bespoke Tint - Legacy Design", caption: "Legacy Interface Before Redesign" },
+    { src: "/assets/projects/bespoke/preview.webp", alt: "Bespoke Tint - Redesigned Portal", caption: "Premium Automotive Customization Portal Rebuild" },
+    { src: "/assets/projects/bespoke/brand-images.jpg", alt: "Bespoke Tint - Professional Assets", caption: "Curated Visual Identity & Photography Assets" },
+    { src: "/assets/projects/bespoke/competitor-analysis.png", alt: "Bespoke Tint - Competitor Strategy", caption: "Strategic Competitor Analysis and SEO Research Mapping" },
+    { src: "/assets/projects/bespoke/washington-vehicle-tint-law-illustration.webp", alt: "Bespoke Tint - Custom SVG Widget", caption: "Real-time Vehicle Window Tint Law SVG Simulator" }
+  ],
 }
 
 export const automedicsKirkland: ProjectData = {
@@ -311,6 +319,13 @@ export const automedicsKirkland: ProjectData = {
     },
   ],
   review: REVIEW_MAP.automedics,
+  showcaseImages: [
+    { src: "/assets/projects/automedics/before.png", alt: "Automedics Kirkland - Legacy Site", caption: "Legacy brochure website before redesign" },
+    { src: "/assets/projects/automedics/preview.webp", alt: "Automedics Kirkland - Rebuilt Site", caption: "Premium conversion-focused Next.js application design" },
+    { src: "/assets/projects/automedics/mobile.png", alt: "Automedics Kirkland - Mobile Responsiveness", caption: "Mobile-responsive interface mockup" },
+    { src: "/assets/projects/automedics/automedics-brand-guide-example.webp", alt: "Automedics Kirkland - Design Tokens", caption: "Custom brand guidelines and visual asset assets" },
+    { src: "/assets/projects/automedics/performance-metrics-automedics-web-development.webp", alt: "Automedics Kirkland - Performance Audits", caption: "Perfect Lighthouse performance audit metrics" }
+  ],
 }
 
 export const iao: ProjectData = {
@@ -428,6 +443,13 @@ export const iao: ProjectData = {
     },
   ],
   review: REVIEW_MAP.iao,
+  showcaseImages: [
+    { src: "/assets/projects/iron-and-oak/iron-and-oak-before-website-design.jpg", alt: "Iron & Oak - Legacy Site", caption: "Legacy desktop web design" },
+    { src: "/assets/projects/iron-and-oak/preview.webp", alt: "Iron & Oak - Premium Redesign", caption: "Modern angular CSS grid interface rebuild" },
+    { src: "/assets/projects/iron-and-oak/iron-and-oak-brand-guide-web-design.png", alt: "Iron & Oak - Brand Guide", caption: "Custom brand design tokens and typography guide" },
+    { src: "/assets/projects/iron-and-oak/iron-and-oak-job-application-portal-web-design.png", alt: "Iron & Oak - Job Portal", caption: "Validated Multi-Step Applicant Submission Form" },
+    { src: "/assets/projects/iron-and-oak/iron-and-oak-website-tool.png", alt: "Iron & Oak - Dynamic Content Hub", caption: "Content syndication and custom publishing tool" }
+  ],
 }
 export const easyQuranAI: ProjectData = {
   hero: {
@@ -546,6 +568,13 @@ export const easyQuranAI: ProjectData = {
     title: "EasyQuran AI",
     img: "/assets/projects/easyquran/app/preview.png",
   },
+  showcaseImages: [
+    { src: "/assets/projects/easyquran/app/home.png", alt: "EasyQuran AI - Mobile App Home Screen", caption: "App Home & Recitation Tracker View" },
+    { src: "/assets/projects/easyquran/app/reciters.png", alt: "EasyQuran AI - Reciter Selection", caption: "High-Fidelity Audio Reciter Selection Interface" },
+    { src: "/assets/projects/easyquran/app/surah.png", alt: "EasyQuran AI - Surah Player Screen", caption: "Continuous Audio Player & Surah Reading View" },
+    { src: "/assets/projects/easyquran/app/kidsQuran.png", alt: "EasyQuran AI - Kids Quran Section", caption: "Interactive Children Learning Portal" },
+    { src: "/assets/projects/easyquran/web/preview.png", alt: "EasyQuran AI - Responsive Web Dashboard", caption: "Unified Web Platform for Desktop Viewports" }
+  ],
 }
 
 export const watchbots: ProjectData = {
@@ -591,4 +620,7 @@ export const watchbots: ProjectData = {
     title: "Watchbots",
     img: "/assets/projects/watchbots/preview.png",
   },
+  showcaseImages: [
+    { src: "/assets/projects/watchbots/preview.png", alt: "Watchbots - AI Monitoring Dashboard", caption: "Real-Time AI-Driven Bot Monitoring Telemetry & Console" }
+  ],
 }
