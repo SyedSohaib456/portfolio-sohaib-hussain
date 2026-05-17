@@ -476,12 +476,68 @@ export const easyQuranAI: ProjectData = {
   phases: [
     {
       id: 1,
-      title: "Architecture",
-      subtitle: "Scalable Mobile Foundation",
-      description: "Designed a robust architecture using React Native and Expo, ensuring seamless cross-platform performance and easy maintenance.",
-      details: ["Implemented atomic design system for components", "Configured Expo dev-client for custom native modules", "Set up automated CI/CD for store deployments"],
+      title: "Mobile Architecture",
+      subtitle: "Robust Mobile Foundation",
+      description: "Designed a robust, production-ready React Native codebase leveraging Expo. Developed highly reusable atomic components and organized standard folder patterns to handle fast features expansion.",
+      details: [
+        "Configured custom native modules utilizing Expo dev-clients",
+        "Atomic folder structure for components, hooks, assets, and routes",
+        "Set up automated app building and CI/CD pipelines via EAS Build"
+      ],
       icon: "/assets/tool-black.webp",
-      feature: <ApproachTabsImage src="/assets/projects/easyquran/app/preview.png" alt="App Architecture" />,
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/app/home.png" alt="App Architecture & Home View" />,
+    },
+    {
+      id: 2,
+      title: "Audio Streaming",
+      subtitle: "High-Fidelity Audio Caching Engine",
+      description: "Built a customized audio player player supporting continuous streams from multiple global reciters, offline download caching, playback speeds, and loop repeats.",
+      details: [
+        "Low-latency playback controls using React Native Track Player",
+        "Dynamic global reciter selection and search indexing interfaces",
+        "Configured robust background playback execution and notification panels"
+      ],
+      icon: "/assets/assets-black-camera.webp",
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/app/reciters.png" alt="Reciters Selection & Audio Player" />,
+    },
+    {
+      id: 3,
+      title: "Surah Reader",
+      subtitle: "Typography & Script Adaptability",
+      description: "Designed a beautiful surah reader interface supporting IndoPak and Uthmani scripts, customizable text sizing, translation overlays, and interactive word breakdowns.",
+      details: [
+        "Custom typography rendering system designed for high Arabic readability",
+        "Interactive word touch trigger displaying deep grammatical root meanings",
+        "Dynamic translations integration supporting multiple global languages"
+      ],
+      icon: "/assets/design-black.webp",
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/app/surah.png" alt="Quran Reading & Surah View" />,
+    },
+    {
+      id: 4,
+      title: "Kids Section & Stories",
+      subtitle: "Gamified Quran Education",
+      description: "Created a dedicated Kids Quran and Islamic audiobooks portal. Incorporated custom Sound APIs, child-friendly colorful vectors, and gamified progress milestones.",
+      details: [
+        "Vibrant Islamic audiobooks with professional narrations for kids",
+        "Gamified progress milestones encouraging children to read daily",
+        "Designed customizable reading settings optimized for younger users"
+      ],
+      icon: "/assets/paint-black.webp",
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/app/kidsQuran.png" alt="Kids Quran Section" />,
+    },
+    {
+      id: 5,
+      title: "Universal Web Access",
+      subtitle: "Responsive Browser Experience",
+      description: "Designed and launched a modern React-based web interface that brings the Quran reading, search indexing, and audio streaming features directly to desktop platforms.",
+      details: [
+        "Fully responsive CSS Grid layout scaled for wide desktop displays",
+        "Synchronized user reading logs and audio stream status via secure Web APIs",
+        "Clean browser audio Web API integration mirroring the native player"
+      ],
+      icon: "/assets/tool-black.webp",
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/web/preview.png" alt="EasyQuran AI Web Dashboard" />,
     },
   ],
   review: {
