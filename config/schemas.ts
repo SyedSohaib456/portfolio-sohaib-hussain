@@ -51,7 +51,7 @@ export function buildProjectGraphMinimal(slug: string, pd: ProjectData, type = "
         ...(pd.hero.link ? { sameAs: [pd.hero.link] } : {}),
         mainEntityOfPage: id,
         isPartOf: { "@id": `${SITE}${SITE_SLUGS.projects}#page` },
-        author: { "@id": `${SITE}/#austin-serb` },
+        author: { "@id": `${SITE}/#sohaib-hussain-shah` },
         publisher: { "@id": `${SITE}#org` },
         inLanguage: "en",
       },

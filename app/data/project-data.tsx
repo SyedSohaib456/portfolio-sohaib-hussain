@@ -573,7 +573,11 @@ export const easyQuranAI: ProjectData = {
     { src: "/assets/projects/easyquran/app/reciters.png", alt: "EasyQuran AI - Reciter Selection", caption: "High-Fidelity Audio Reciter Selection Interface" },
     { src: "/assets/projects/easyquran/app/surah.png", alt: "EasyQuran AI - Surah Player Screen", caption: "Continuous Audio Player & Surah Reading View" },
     { src: "/assets/projects/easyquran/app/kidsQuran.png", alt: "EasyQuran AI - Kids Quran Section", caption: "Interactive Children Learning Portal" },
-    { src: "/assets/projects/easyquran/web/preview.png", alt: "EasyQuran AI - Responsive Web Dashboard", caption: "Unified Web Platform for Desktop Viewports" }
+    { src: "/assets/projects/easyquran/web/preview.png", alt: "EasyQuran AI - Responsive Web Dashboard Preview", caption: "Unified Web Platform for Desktop Viewports" },
+    { src: "/assets/projects/easyquran/web/home.png", alt: "EasyQuran AI - Web Application Home Screen", caption: "Web App Main Navigation & Reading Console" },
+    { src: "/assets/projects/easyquran/web/surah.png", alt: "EasyQuran AI - Web Surah Interface", caption: "Multi-script Typography Surah Display on Web" },
+    { src: "/assets/projects/easyquran/web/translation.png", alt: "EasyQuran AI - Web Translation Panel", caption: "Integrated Multi-language Translation Layout" },
+    { src: "/assets/projects/easyquran/web/audio.png", alt: "EasyQuran AI - Web Audio Selection", caption: "Seamless Audio Stream Selector on Web" }
   ],
 }
 
