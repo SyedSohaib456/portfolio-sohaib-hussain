@@ -13,7 +13,7 @@ import { REVIEW_MAP, type ReviewProps } from "./review-data"
 import heroBeforeIao from "@/public/assets/projects/iron-and-oak/iron-and-oak-before-website-design.jpg"
 import heroBeforeMobileIao from "@/public/assets/projects/iron-and-oak/iron-and-oak-before-website-design-mobile.jpg"
 import { ApproachTabsImage } from "../components/ProjectSection/ApproachTabsImage"
-import easyQuranPreview from "@/public/assets/projects/easyquran/preview.png"
+import easyQuranPreview from "@/public/assets/projects/easyquran/app/preview.png"
 import watchbotsPreview from "@/public/assets/projects/watchbots/preview.png"
 
 //   interface ProjectData {
@@ -481,14 +481,14 @@ export const easyQuranAI: ProjectData = {
       description: "Designed a robust architecture using React Native and Expo, ensuring seamless cross-platform performance and easy maintenance.",
       details: ["Implemented atomic design system for components", "Configured Expo dev-client for custom native modules", "Set up automated CI/CD for store deployments"],
       icon: "/assets/tool-black.webp",
-      feature: <ApproachTabsImage src="/assets/projects/easyquran/preview.png" alt="App Architecture" />,
+      feature: <ApproachTabsImage src="/assets/projects/easyquran/app/preview.png" alt="App Architecture" />,
     },
   ],
   review: {
     quote: "Sohaib's expertise in React Native was crucial for the successful launch of EasyQuran AI. He delivered a high-quality product that exceeded our expectations.",
     name: "Product Owner",
     title: "EasyQuran AI",
-    img: "/assets/projects/easyquran/preview.png",
+    img: "/assets/projects/easyquran/app/preview.png",
   },
 }
 
